@@ -36,7 +36,23 @@ public class DocumentoBD {
             return null;
        }
     }
-    
+     public int conseguirCuentaTramiteDoc (int codigoDT)
+    {
+        try {
+            ResultSet rs = null;
+            PreparedStatement psConsultar = null;
+            String consultaBuscar = "select count(codTra) from transaccion where codDoc =?";
+            psConsultar = nueva.getConnection().prepareStatement(consultaBuscar);
+            psConsultar.setInt(1, codigoDT);
+            rs = psConsultar.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (Exception ex) {
+            return -1;
+        }
+        return -1;
+    }
      public ArrayList<String> seleccionarEstadoDoc(){
         ArrayList<String> tipodocs=new ArrayList<String>();
         try{

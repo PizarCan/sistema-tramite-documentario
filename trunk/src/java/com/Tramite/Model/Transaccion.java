@@ -20,6 +20,7 @@ public class Transaccion {
     String fecha;
     int codDoc;
     String desTra;
+    int cuenta;
 
     public Transaccion(int codTra, int codRec, int codUsu, int codDestino, int codEst, String fecha, int codDoc, String desTra) {
         this.codTra = codTra;
@@ -32,6 +33,15 @@ public class Transaccion {
         this.desTra = desTra;
         
     }
+
+    public int getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(int cuenta) {
+        this.cuenta = cuenta;
+    }
+    
       
     public String conseguirNombre()
     {   nueva = new TramiteBD();
@@ -121,6 +131,25 @@ public class Transaccion {
         nueva = new TramiteBD();
         nueva.insertarTransaccion(this);
     }
+    public int conseguirCuenta(int codigoD)
+    {
+        nueva = new TramiteBD();
+        return nueva.conseguirCuentaTramite(codigoD);
+    }
+    
+    public int conseguirCuentaAnt(int cuenta1)
+    {
+        nueva = new TramiteBD();
+        return nueva.conseguirCodigoTranAnt(cuenta1);
+    }
+    
+    public void actualizarAnteriorTransaccion(int codigTA)
+    {
+        nueva = new TramiteBD();
+        nueva.actualizarTransaccionAnterior(codigTA);
+    }
+    
+    
 //    public Transaccion conseguirAnteriorTransaccion ()
 //    {
 //        nueva = new TramiteBD();

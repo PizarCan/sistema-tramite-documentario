@@ -53,6 +53,7 @@
    out.println(codigo+"codigo  ");
    out.println(descripcion+"desc ");
    Transaccion nuevaTran = new Transaccion(codigot,codRec,codUsu,codAreDes,codEsta,fecha,codigo,descripcion);
+   nuevaTran.setCuenta(1);
    nuevaTran.iniciarTransaccion();
                
                

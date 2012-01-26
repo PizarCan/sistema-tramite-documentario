@@ -41,7 +41,12 @@
    out.println(descripcion+"d esc ");
    
    Transaccion nuevaTran = new Transaccion(codigot,codRec,codUsu,codDes,codEst,fecha,Integer.parseInt(codigoDoc),descripcion);
+   int cuentaD =nuevaTran.conseguirCuenta(Integer.parseInt(codigoDoc));
+   nuevaTran.setCuenta(cuentaD);
+   int codigoTAnt=nuevaTran.conseguirCuentaAnt(cuentaD-1);
+   nuevaTran.actualizarAnteriorTransaccion(codigoTAnt);
    nuevaTran.iniciarTransaccion();
+   
                
                
    response.sendRedirect("/SistemaTramiteDocumentario/bandeja/mensajebandejaenviados.jsp");
