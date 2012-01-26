@@ -21,8 +21,10 @@ public class Documento {
     String ultiestado;
     String nombreArea;
     
+    
      @Override
     public String toString() {
+        this.conseguirTramiteCuenta();
         return "<td>"+Asunto+"</td><td>"+codigo+"</td><td>"+maximo+"</td><td>"+descripcion+"</td><td>"+ultiestado+"</td><td>"+fecha+"</td>";
     }
     public Documento()
@@ -102,5 +104,16 @@ public class Documento {
         
    
     }
+     public void conseguirTramiteCuenta()
+    {  
+        consulta = new DocumentoBD();
+                  
+    maximo = consulta.conseguirCuentaTramiteDoc(codigo);
+        
+        
+   
+    } 
+     
+     
     
 }

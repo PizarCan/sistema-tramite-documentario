@@ -83,7 +83,7 @@ public class DocumentoEntradaBD {
            
             PreparedStatement psConsultar = null;
             String consultaBuscar="SELECT transaccion.codRec,transaccion.codDoc,asuntoDoc,nombreUsu,ApellidoUsu,area.nombreAre,estado.nombreEst,fecTra from transaccion,documento,usuario,Estado,Area "
-                    + "where area.codAre=usuario.codAre and estado.codEst=transaccion.codEst and documento.coddoc=transaccion.coddoc and  transaccion.codusu=usuario.codusu and transaccion.destinoAre=?";
+                    + "where area.codAre=usuario.codAre and estado.codEst=transaccion.codEst and documento.coddoc=transaccion.coddoc and  transaccion.codusu=usuario.codusu and transaccion.destinoAre=? and transaccion.codRec=1";
             psConsultar = nueva.getConnection().prepareStatement(consultaBuscar);
             psConsultar.setInt(1,codigo);
             rs= psConsultar.executeQuery();

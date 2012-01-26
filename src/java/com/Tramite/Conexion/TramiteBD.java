@@ -105,6 +105,59 @@ public class TramiteBD {
         }
         return null;
     }
+    public int conseguirCuentaTramite (int codigoDT)
+    {
+        try {
+            ResultSet rs = null;
+            PreparedStatement psConsultar = null;
+            String consultaBuscar = "select count(codTra) from transaccion where codDoc =?";
+            psConsultar = nueva.getConnection().prepareStatement(consultaBuscar);
+            psConsultar.setInt(1, codigoDT);
+            rs = psConsultar.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1)+1;
+            }
+        } catch (Exception ex) {
+            return -1;
+        }
+        return -1;
+    }
+    public int conseguirCodigoTranAnt (int cuentaAnt)
+    {
+        try {
+            ResultSet rs = null;
+            PreparedStatement psConsultar = null;
+            String consultaBuscar = "select codTra from transaccion where cuentaTra =?";
+            psConsultar = nueva.getConnection().prepareStatement(consultaBuscar);
+            psConsultar.setInt(1, cuentaAnt);
+            rs = psConsultar.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (Exception ex) {
+            return -1;
+        }
+        return -1;
+    }
+    
+     public void actualizarTransaccionAnterior (int codigoTran)
+    {
+        try {
+            ResultSet rs = null;
+            PreparedStatement psConsultar = null;
+            String consultaBuscar = "update transaccion set codRec = 2 where codTra=?";
+            psConsultar = nueva.getConnection().prepareStatement(consultaBuscar);
+            psConsultar.setInt(1, codigoTran);
+            psConsultar.executeUpdate();
+            
+        } catch (Exception ex) {
+            
+        }
+        
+    }
+    
+    
+    
     
     public String conseguirNombre(int codUsu) {
         try {
@@ -129,7 +182,7 @@ public class TramiteBD {
         try {
             ResultSet rs = null;
             PreparedStatement psConsultar = null;
-            String consultaInsertar = "INSERT into transaccion values (?,?,?,?,?,?,?,?)";
+            String consultaInsertar = "INSERT into transaccion values (?,?,?,?,?,?,?,?,?)";
             psConsultar = nueva.getConnection().prepareStatement(consultaInsertar);
             psConsultar.setInt(1, nuevat.getCodTra());
             psConsultar.setInt(2, nuevat.getCodRec());
@@ -139,6 +192,7 @@ public class TramiteBD {
             psConsultar.setString(6, nuevat.getFecha());
             psConsultar.setInt(7, nuevat.getCodDoc());
             psConsultar.setString(8, nuevat.getDesTra());
+            psConsultar.setInt(9, nuevat.getCuenta());
 
             int res = psConsultar.executeUpdate();
             String consultaTransa = "";
