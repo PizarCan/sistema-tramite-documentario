@@ -68,8 +68,8 @@
                 <input id="c_RadioButton" name="rb_Estado" value="inactivo" type="radio" style="position: absolute; left: 76%; top: 56%; z-index: 11;">
             <%}
             else{%>
-                <input id="c_RadioButton" name="rb_Estado" value="activo" type="radio" style="position: absolute; left: 56%; top: 56%; z-index: 10;">
-                <input id="c_RadioButton" name="rb_Estado" value="inactivo" type="radio" style="position: absolute; left: 76%; top: 56%; z-index: 11;" checked>
+                <input id="c_RadioButton" name="rb_Estado" value="activo" type="radio" style="position: absolute; left: 56%; top: 56%; z-index: 10;" checked>
+                <input id="c_RadioButton" name="rb_Estado" value="inactivo" type="radio" style="position: absolute; left: 76%; top: 56%; z-index: 11;">
             <%}
         %>
 
