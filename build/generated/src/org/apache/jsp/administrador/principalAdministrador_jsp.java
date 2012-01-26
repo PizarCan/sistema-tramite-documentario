@@ -1,0 +1,276 @@
+package org.apache.jsp.administrador;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class principalAdministrador_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.Vector _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public Object getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
+      out.write("<!-- saved from url=(0014)about:internet -->\n");
+      out.write("<html><head>\n");
+      out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE8\">\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
+      out.write("        <title>Administrador del Sistema</title>\n");
+      out.write("\n");
+      out.write("        <script type=\"text/javascript\" src=\"/SistemaTramiteDocumentario/jquery/jquery-1.js\"></script>\n");
+      out.write("\n");
+      out.write("        <link href=\"/SistemaTramiteDocumentario/jquery/tablecloth.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />\n");
+      out.write("        <script type=\"text/javascript\" src=\"/SistemaTramiteDocumentario/jquery/tablecloth.js\"></script>\n");
+      out.write("        <link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        <style type=\"text/css\">\n");
+      out.write("\n");
+      out.write("            body\n");
+      out.write("            {\n");
+      out.write("                background-color: #FFFFFF;\n");
+      out.write("                color: #000000;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("        <style type=\"text/css\">\n");
+      out.write("            #TabMenu1\n");
+      out.write("            {\n");
+      out.write("                text-align: left;\n");
+      out.write("                margin: 0px 0 1px 0;\n");
+      out.write("                font-family: \"Comic Sans MS\";\n");
+      out.write("                font-size: 27px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                list-style-type: none;\n");
+      out.write("                padding: 22px 0px 3px 10px;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu1 li\n");
+      out.write("            {\n");
+      out.write("                display: inline;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu1 a:link.active, #TabMenu1 a:visited.active, #TabMenu1 a:hover.active\n");
+      out.write("            {\n");
+      out.write("                border-bottom: 1px solid #F7F9FC;\n");
+      out.write("                background-color: #F7F9FC;\n");
+      out.write("                color: #005500;\n");
+      out.write("                position: relative;\n");
+      out.write("                padding-top: 3px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu1 a:link, #TabMenu1 a:visited\n");
+      out.write("            {\n");
+      out.write("                padding: 3px 4px;\n");
+      out.write("                border: 1px solid #FFFFFF;\n");
+      out.write("                background-color: #FFFFFF;\n");
+      out.write("                color: #1C3B69;\n");
+      out.write("                margin-right: 0px;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("                border-bottom: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu1 a:hover\n");
+      out.write("            {\n");
+      out.write("                background: #F7F9FC;\n");
+      out.write("                color: #000000;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("        <style type=\"text/css\">\n");
+      out.write("            #TabMenu2\n");
+      out.write("            {\n");
+      out.write("                text-align: left;\n");
+      out.write("                margin: 0px 0 1px 0;\n");
+      out.write("                font-family: \"Comic Sans MS\";\n");
+      out.write("                font-size: 27px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                list-style-type: none;\n");
+      out.write("                padding: 22px 0px 3px 10px;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu2 li\n");
+      out.write("            {\n");
+      out.write("                display: inline;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu2 a:link.active, #TabMenu2 a:visited.active, #TabMenu2 a:hover.active\n");
+      out.write("            {\n");
+      out.write("                border-bottom: 1px solid #F7F9FC;\n");
+      out.write("                background-color: #F7F9FC;\n");
+      out.write("                color: #005500;\n");
+      out.write("                position: relative;\n");
+      out.write("                padding-top: 3px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu2 a:link, #TabMenu2 a:visited\n");
+      out.write("            {\n");
+      out.write("                padding: 3px 4px;\n");
+      out.write("                border: 1px solid #FFFFFF;\n");
+      out.write("                background-color: #FFFFFF;\n");
+      out.write("                color: #1C3B69;\n");
+      out.write("                margin-right: 0px;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("                border-bottom: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu2 a:hover\n");
+      out.write("            {\n");
+      out.write("                background: #F7F9FC;\n");
+      out.write("                color: #000000;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("        <style type=\"text/css\">\n");
+      out.write("            #TabMenu3\n");
+      out.write("            {\n");
+      out.write("                text-align: left;\n");
+      out.write("                margin: 0px 0 1px 0;\n");
+      out.write("                font-family: \"Comic Sans MS\";\n");
+      out.write("                font-size: 27px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                list-style-type: none;\n");
+      out.write("                padding: 22px 0px 3px 10px;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu3 li\n");
+      out.write("            {\n");
+      out.write("                display: inline;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu3 a:link.active, #TabMenu3 a:visited.active, #TabMenu3 a:hover.active\n");
+      out.write("            {\n");
+      out.write("                border-bottom: 1px solid #F7F9FC;\n");
+      out.write("                background-color: #F7F9FC;\n");
+      out.write("                color: #005500;\n");
+      out.write("                position: relative;\n");
+      out.write("                padding-top: 3px;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu3 a:link, #TabMenu3 a:visited\n");
+      out.write("            {\n");
+      out.write("                padding: 3px 4px;\n");
+      out.write("                border: 1px solid #FFFFFF;\n");
+      out.write("                background-color: #FFFFFF;\n");
+      out.write("                color: #1C3B69;\n");
+      out.write("                margin-right: 0px;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("                border-bottom: none;\n");
+      out.write("            }\n");
+      out.write("            #TabMenu3 a:hover\n");
+      out.write("            {\n");
+      out.write("                background: #F7F9FC;\n");
+      out.write("                color: #000000;\n");
+      out.write("                font-weight: normal;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("    <link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("\n");
+      out.write("    <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n");
+      out.write("\n");
+      out.write("    <!-- ImageReady Slices (layout.psd) -->\n");
+      out.write("    <!-- TABLA CABECERA DEL INDEX -->\n");
+      out.write("    <TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>\n");
+      out.write("        <TR>\n");
+      out.write("            <TD COLSPAN=4 ROWSPAN=1>\n");
+      out.write("                <IMG SRC=\"/SistemaTramiteDocumentario/images/arequipa.png\" WIDTH=100%    HEIGHT=200 ALT=\"\"></TD>\n");
+      out.write("\n");
+      out.write("            <TD COLSPAN=4 ROWSPAN=1>\n");
+      out.write("                <IMG SRC=\"/SistemaTramiteDocumentario/images/logo.png\" WIDTH=100% HEIGHT=200 ALT=\"\"></TD>\n");
+      out.write("            <TD COLSPAN=4 ROWSPAN=1>\n");
+      out.write("                <IMG SRC=\"/SistemaTramiteDocumentario/images/arequipa.png\" WIDTH=100% HEIGHT=200 ALT=\"\"></TD>\n");
+      out.write("        </TR>\n");
+      out.write("\n");
+      out.write("    </TABLE>\n");
+      out.write("\n");
+      out.write("    <!-- CUERPO DE LA PAGINA WEB -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    <!-- parte final de web -->    \n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<div>\n");
+      out.write("        \n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/icono1.png\" style=\"cursor:pointer; position:absolute; left:30%; top:45% \">\n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/icono1.png\" style=\"cursor:pointer; position:absolute; left:25%; top:55% \">\n");
+      out.write("        \n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/icono1.png\" style=\"cursor:pointer; position:absolute; left:23%; top:67% \">\n");
+      out.write("\n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/nuevoUsuario.png\" onmouseover=\"this.width=48;this.height=48;\" onmouseout=\"this.width=40;this.height=40;\" style=\"position:absolute; left:30.5%; top:46% \">\n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/usariosgestion.png\"onmouseover=\"this.width=45;this.height=45;\" onmouseout=\"this.width=36;this.height=36;\" style=\"position:absolute; left:25.7%; top:56%  \">\n");
+      out.write("        \n");
+      out.write("        <img src=\"/SistemaTramiteDocumentario/images/salir.png\" onmouseover=\"this.height=45;\" onmouseout=\"this.width=35;this.height=35;\" style=\"position:absolute; left:23.8%; top:68.3% \">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <ul id=\"TabMenu1\" style =\"position:absolute; top:43.5%;left:33.3%\">\n");
+      out.write("            <li><a href=\"/SistemaTramiteDocumentario/administradorfun/creacionusuario.jsp\">Creacion de Nuevos Usuario</a></li>\n");
+      out.write("        </ul>\n");
+      out.write("        \n");
+      out.write("\n");
+      out.write("        <ul id=\"TabMenu2\" style =\"position:absolute; top:54.5%;left:28.5%\">\n");
+      out.write("            <li><a href=\"/SistemaTramiteDocumentario/administradorfun/gestionusuarios.jsp\">Gestion de Usuarios</a></li>\n");
+      out.write("        </ul>\n");
+      out.write("        \n");
+      out.write("       \n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <ul id=\"TabMenu3\" style =\"position:absolute; top:65%;left:27.5%\">\n");
+      out.write("            <li><a href=\"/SistemaTramiteDocumentario/index/index.jsp\">Salir</a></li>\n");
+      out.write("        </ul>\n");
+      out.write("    </div>\n");
+      out.write("\n");
+      out.write("</body></html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
