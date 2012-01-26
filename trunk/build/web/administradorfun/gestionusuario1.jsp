@@ -7,8 +7,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Modificacion de Datos</title>
         <script type="text/javascript" src="/SistemaTramiteDocumentario/jquery/jquery-1.js"></script>
-        <link href="/SistemaTramiteDocumentario/jquery/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-        <script type="text/javascript" src="/SistemaTramiteDocumentario/jquery/tablecloth.js"></script>
+        <link href="/SistemaTramiteDocumentario/jquery/tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="tablecloth.js"></script>
         
         <link href="css/style.css" rel="stylesheet" type="text/css">
         
@@ -16,9 +16,9 @@
             filas[1].className=selected;
             
             function modificar(){
-                var tab = document.getElementById('tabla')
+                var tab = document.getElementById('table')
                 var filas = tab.getElementsByTagName('tr');
-                //alert(filas.length);//num filas
+                //num filas
                 var filaSeleccionada = retornarFilaSel();
                 
                 if(filaSeleccionada==-1)
@@ -58,7 +58,7 @@
         </TABLE>
 
         <div style ="width:800px;height:100px;position:absolute; top:45%;left:20%">      
-            <table style="cursor:pointer" id="tabla">			
+            <table style="cursor:pointer" id="table">			
                 <tr >				
                     
                     <th style ="width:50px;text-align:center; ">Codigo</th>
